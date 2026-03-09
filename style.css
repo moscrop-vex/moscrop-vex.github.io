@@ -54,8 +54,8 @@ body{
         &:nth-child(2){
           opacity:1;
           transform:  rotate(-45deg) translate(-6px, 5px);
-            background: #eb30ba;
-                box-shadow: 0 0 2em 0.2em #eb30ba;
+            background: #ff6600;
+                box-shadow: 0 0 2em 0.2em #ff6600;
         }
         &:nth-child(3){
             opacity:0;
@@ -68,8 +68,8 @@ body{
           margin-top: -3px;
           width: 35px;
           transform: rotate(45deg) translate(-5px, -5px);
-          background: #eb30ba;
-              box-shadow: 0 0 2em 0.2em #eb30ba;
+          background: #ff6600;
+              box-shadow: 0 0 2em 0.2em #ff6600;
         }
         
        
@@ -91,21 +91,33 @@ body{
        
 }
 
-.sideMenu{
-    border-radius: 16px;
+.sideMenuBlur{
     position: fixed;
-    top: 170px;
+    top: 180px;
     right: -300px;
-    width: 260px;
-    height: calc(100% - 120px);
-    background: #272727;
+    width: 280px;
+    height: calc(100% - 170px - 20px);
+    padding: 1px;
+    background: rgba(17, 17, 17, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    z-index: 9998;
     transition: right 0.3s;
-
-    z-index: 9999; 
 }
 
-.sideMenu.open{
-    right: 10px;
+.sideMenu{
+    position:absolute;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    margin:7px;
+    background: #272727;
+    border-radius: 12px;
+}
+
+.sideMenuBlur.open{
+    right: 0;
+    
 }
 
 .sideMenuOptions{
@@ -129,7 +141,6 @@ body{
     border-radius: 12px;
 }
 
-/* Desktop menu style */
 .desktopMenu {
     margin-right: 40px;
     display: flex;
@@ -151,12 +162,10 @@ body{
     border-radius: 12px;
 }
 
-/* Hide hamburger menu by default on desktop */
 .menu {
     display: none;
 }
 
-/* Mobile: show hamburger, hide desktop menu */
 @media (max-width: 1080px) {
     .desktopMenu {
         display: none;
