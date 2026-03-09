@@ -2,3 +2,12 @@
 <div class="instagramlink">
     <a href="https://www.instagram.com/mosbots"><img src="img/instagramicon.png" height=20px>‎ @mosbots</a>
 </div>
+
+
+.instagramlink a{
+    display:flex;
+    align-items: center;
+}
+.instagramlink p{
+    margin:10px;
+}
