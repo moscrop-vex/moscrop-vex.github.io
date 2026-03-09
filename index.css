@@ -74,6 +74,9 @@
     text-align: center;
     padding: 20px 20px;
 }
+.sponsors h2{
+    font-size:40px;
+}
 
 .hero a{
     font-size: 25px;
@@ -102,47 +105,70 @@ footer a:hover{
 
 
 
-.cards {
-  display: flex;
-  gap: 15px;
-  padding:50px;
+.cards .gabriel {
+  background-image: url('img/gabriel.jpg');
 }
 
-.cards .gabriel {
-  background-color: grey;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 8%;
 }
 
 .cards .card {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 16px;
-  color: white;
-  cursor: pointer;
-  transition: 400ms;
-  background-image: url('img/gabriel.jpg');
-  background-size:150%;
+    position: relative;
+    background-color: grey;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 2/1;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.cards .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    border-radius: 16px;
+    z-index: 1;
 }
 
 .cards .card h3.tip {
-  font-size: 60px;
-  color: white;
-  font-weight: 700;
-  margin-top:20px;
-  filter: drop-shadow(10px 10px 10px black);
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    font-size: 2rem;
+    margin-top: 20px;
+    font-size:50px;
+    text-shadow: 10px 10px 10px black;
 }
 
 .cards .card p.second-text {
-  font-size: .7em;
+    position: relative;
+    z-index: 2;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(20px);
 }
 
 .cards .card:hover {
-  transform: scale(1.1, 1.1);
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(255, 102, 0, 0.5);
 }
 
-.cards:hover > .card:not(:hover) {
-  filter: blur(5px);
-  transform: scale(0.9, 0.9);
+.cards .card:hover p.second-text {
+    opacity: 1;
+    transform: translateY(0)50px
+}
+
+.cards:has(.card:hover) .card:not(:hover) {
+    transform: scale(0.90);
+    filter: blur(1px);
+    opacity: 0.8;
 }
