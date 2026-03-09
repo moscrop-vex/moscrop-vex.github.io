@@ -1,0 +1,4 @@
+<div><a href="mailto:moscrop.vex@gmail.com">🖂 moscrop.vex@gmail.com</a></div>
+<div class="instagramlink">
+    <a href="https://www.instagram.com/mosbots"><img src="img/instagramicon.png" height=20px>‎ @mosbots</a>
+</div>
