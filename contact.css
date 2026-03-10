@@ -1,10 +1,11 @@
-.instagramlink a{
+.link a{
     display:flex;
     align-items: center;
 }
-.instagramlink p{
+.link p{
     margin:10px;
 }
+
 
 
 .main a{
