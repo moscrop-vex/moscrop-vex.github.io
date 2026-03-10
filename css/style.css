@@ -192,3 +192,22 @@ footer a{
 footer a:hover{
     text-decoration: underline;
 }
+
+/* highlight the current page link with an underline */
+.desktopMenu a,
+.sideMenuOptions a {
+    position: relative;
+    transition: border-color 0.3s;
+}
+
+.desktopMenu a.active,
+.sideMenuOptions a.active {
+    border-bottom: 3px solid #ff6600;
+}
+
+/* no special page-transition styles; load normally */
+body {
+    /* restore default behavior */
+    transform: none;
+    transition: none;
+}

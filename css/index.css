@@ -16,7 +16,7 @@
 
 #home-hero {
     position: relative; 
-    background-image: url('img/home-hero-bg.jpg');
+    background-image: url('../img/home-hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,10 +85,10 @@
 }
 
 .cards .gabriel {
-  background-image: url('img/gabriel.jpg');
+  background-image: url('../img/gabriel.jpg');
 }
 .cards .gertrude{
-    background-image: url('img/gertrude.jpg');
+    background-image: url('../img/gertrude.jpg');
 }
 
 .cards {

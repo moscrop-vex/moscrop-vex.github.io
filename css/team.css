@@ -9,31 +9,31 @@
 }
 
 .cards .naran {
-  background-image: url('img/team/naran.jpg');
+  background-image: url('../img/team/naran.jpg');
 }
 .cards .joseph {
-  background-image: url('img/team/joseph.jpg');
+  background-image: url('../img/team/joseph.jpg');
 }
 .cards .daniel {
-  background-image: url('img/team/daniel.jpg');
+  background-image: url('../img/team/daniel.jpg');
 }
 .cards .radin {
-  background-image: url('img/team/radin.jpg');
+  background-image: url('../img/team/radin.jpg');
 }
 .cards .krish {
-  background-image: url('img/team/krish.jpg');
+  background-image: url('../img/team/krish.jpg');
 }
 .cards .kaleb {
-  background-image: url('img/team/kaleb.jpg');
+  background-image: url('../img/team/kaleb.jpg');
 }
 .cards .kai {
-  background-image: url('img/team/kai.jpg');
+  background-image: url('../img/team/kai.jpg');
 }
 .cards .chris {
-  background-image: url('img/team/chris.jpg');
+  background-image: url('../img/team/chris.jpg');
 }
 .cards .mrder{
-  background-image: url('img/team/mrder');
+  background-image: url('../img/team/mrder.jpg');
 }
 
 .cards {
