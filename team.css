@@ -1,0 +1,102 @@
+.members{
+    color:white;
+}
+.members h2{
+  margin-top: 5%;
+  margin-bottom: -2%;
+  font-size: 60px;
+  text-align: center;
+}
+
+.cards .naran {
+  background-image: url('img/team/naran.jpg');
+}
+.cards .joseph {
+  background-image: url('img/team/joseph.jpg');
+}
+.cards .daniel {
+  background-image: url('img/team/daniel.jpg');
+}
+.cards .radin {
+  background-image: url('img/team/radin.jpg');
+}
+.cards .krish {
+  background-image: url('img/team/krish.jpg');
+}
+.cards .kaleb {
+  background-image: url('img/team/kaleb.jpg');
+}
+.cards .kai {
+  background-image: url('img/team/kai.jpg');
+}
+.cards .chris {
+  background-image: url('img/team/chris.jpg');
+}
+.cards .mrder{
+  background-image: url('img/team/mrder');
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 8%;
+}
+
+.cards .card {
+    position: relative;
+    background-color: grey;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.cards .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.cards .card h3.tip {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    font-size: 2rem;
+    margin-top: 240px;
+    font-size:50px;
+    text-shadow: 10px 10px 10px black;
+}
+
+.cards .card p.second-text {
+    position: relative;
+    z-index: 2;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(20px);
+}
+
+.cards .card:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(255, 102, 0, 0.5);
+}
+
+.cards .card:hover p.second-text {
+    opacity: 1;
+    transform: translateY(0)50px
+}
+
+.cards:has(.card:hover) .card:not(:hover) {
+    transform: scale(0.90);
+    filter: blur(1px);
+    opacity: 0.8;
+}

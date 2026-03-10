@@ -1,0 +1,25 @@
+.instagramlink a{
+    display:flex;
+    align-items: center;
+}
+.instagramlink p{
+    margin:10px;
+}
+
+
+.main a{
+    font-size: 25px;
+    color:#f5f5f5;
+    text-decoration: none;
+}
+.main a:hover{
+    color:lightgray;
+    text-decoration:underline;
+}
+.main {
+    color: white;
+    padding: 60px 40px;
+}
+.main h2{
+    font-size:40px;
+}
