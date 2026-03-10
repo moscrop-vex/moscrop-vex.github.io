@@ -87,6 +87,9 @@
 .cards .gabriel {
   background-image: url('img/gabriel.jpg');
 }
+.cards .gertrude{
+    background-image: url('img/gertrude.jpg');
+}
 
 .cards {
     display: grid;
