@@ -4,7 +4,7 @@
 .members h2{
   margin-top: 5%;
   margin-bottom: -2%;
-  font-size: 60px;
+  font-size: 2.500rem;
   text-align: center;
 }
 
@@ -72,7 +72,7 @@
     z-index: 2;
     font-size: 2rem;
     margin-top: 240px;
-    font-size:50px;
+    font-size: 2.083rem;
     text-shadow: 10px 10px 10px black;
 }
 
@@ -102,23 +102,101 @@
 }
 /* Mobile styles for team page */
 @media (max-width: 768px) {
+    .members h2 {
+        font-size: 2.333rem;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        padding: 35px;
+    }
+
+    .cards .card {
+        aspect-ratio: 1/1;
+        min-height: 200px;
+    }
+
+    .cards .card h3.tip {
+        font-size: 2.2em;
+        margin-top: auto;
+        text-align: center;
+    }
+
+    .cards .card:hover {
+        transform: scale(1.05);
+        box-shadow: 6px 6px 15px rgba(255, 102, 0, 0.4);
+    }
+
+    .cards:has(.card:hover) .card:not(:hover) {
+        transform: scale(1);
+        filter: none;
+        opacity: 1;
+    }
+
     .team-content {
-        padding: 20px;
+        padding: 35px;
     }
 
     .team-content h2 {
-        font-size: 40px;
+        font-size: 2.333rem;
     }
 
     .team-member {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .team-member h3 {
-        font-size: 24px;
+        font-size: 1.333rem;
     }
 
     .team-member p {
-        font-size: 16px;
+        font-size: 0.917rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .members h2 {
+        font-size: 1.875rem;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 18px;
+        padding: 25px;
+    }
+
+    .cards .card {
+        min-height: 160px;
+    }
+
+    .cards .card h3.tip {
+        font-size: 1.8em;
+    }
+
+    .cards .card:hover {
+        transform: scale(1.02);
+    }
+
+    .team-content {
+        padding: 25px;
+    }
+
+    .team-content h2 {
+        font-size: 1.875rem;
+    }
+
+    .team-member h3 {
+        font-size: 1.083rem;
+    }
+
+    .team-member p {
+        font-size: 0.750rem;
+        line-height: 1.4;
     }
 }

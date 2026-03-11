@@ -6,13 +6,13 @@
 }
 
 .competitions h2 {
-    font-size: 60px;
+    font-size: 2.500rem;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .competitions p {
-    font-size: 24px;
+    font-size: 1.000rem;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -26,13 +26,13 @@
 }
 
 .competition-entry .event-name {
-    font-size: 36px;
+    font-size: 1.500rem;
     margin-bottom: 10px;
     color: #ff6600;
 }
 
 .competition-entry time {
-    font-size: 18px;
+    font-size: 0.750rem;
     color: #cccccc;
     display: block;
     margin-bottom: 15px;
@@ -44,7 +44,7 @@
 }
 
 .competition-entry li {
-    font-size: 20px;
+    font-size: 0.833rem;
     margin-bottom: 10px;
     line-height: 1.4;
 }
@@ -56,30 +56,85 @@
 /* Mobile styles for competitions page */
 @media (max-width: 768px) {
     .competitions {
-        padding: 20px;
+        padding: 15px;
+        max-width: 100%;
     }
 
     .competitions h2 {
-        font-size: 40px;
+        font-size: 1.083rem;
+        margin-bottom: 15px;
     }
 
     .competitions p {
-        font-size: 20px;
+        font-size: 0.625rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
     }
 
     .competition-entry {
         padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 12px;
     }
 
     .competition-entry .event-name {
-        font-size: 28px;
+        font-size: 0.833rem;
+        margin-bottom: 8px;
     }
 
     .competition-entry time {
-        font-size: 16px;
+        font-size: 0.583rem;
+        margin-bottom: 10px;
     }
 
     .competition-entry li {
-        font-size: 18px;
+        font-size: 0.583rem;
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .competition-entry strong {
+        font-size: 0.583rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .competitions {
+        padding: 10px;
+    }
+
+    .competitions h2 {
+        font-size: 0.833rem;
+        margin-bottom: 12px;
+    }
+
+    .competitions p {
+        font-size: 0.542rem;
+        line-height: 1.5;
+    }
+
+    .competition-entry {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .competition-entry .event-name {
+        font-size: 0.667rem;
+        margin-bottom: 6px;
+    }
+
+    .competition-entry time {
+        font-size: 0.500rem;
+        margin-bottom: 8px;
+    }
+
+    .competition-entry li {
+        font-size: 0.500rem;
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
+
+    .competition-entry strong {
+        font-size: 0.500rem;
     }
 }

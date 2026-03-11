@@ -4,15 +4,15 @@
 }
 
 .hero h2 {
-    font-size: 55px;
+    font-size: 2.292rem;
     margin-bottom: -30px;
 }
 .hero h3 {
-    font-size: 40px;
+    font-size: 1.667rem;
 }
 
 .hero p {
-    font-size: 30px;
+    font-size: 1.250rem;
     margin-bottom: 10px;
 }
 
@@ -62,7 +62,7 @@
 .robots h2{
     padding-left:40px;
     margin-bottom: -30px;
-    font-size: 60px;
+    font-size: 2.500rem;
 }
 
 .sponsors{
@@ -71,14 +71,14 @@
     padding: 20px 20px;
 }
 .sponsors h2{
-    font-size:80px;
+    font-size: 3.333rem;
 }
 .sponsors p{
-    font-size: 30px;
+    font-size: 1.250rem;
 }
 
 .hero a{
-    font-size: 25px;
+    font-size: 1.042rem;
     color:#f5f5f5;
     text-decoration: none;
 }
@@ -180,18 +180,180 @@
 }
 
 .popup-content h2{
-    font-size: 40px;
+    font-size: 1.667rem;
     margin-bottom: 15px;
 }
 
 .popup-content p{
-    font-size: 20px;
+    font-size: 0.833rem;
 }
 
 .close{
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 35px;
+    font-size: 1.458rem;
     cursor: pointer;
+}
+
+/* Mobile responsiveness for home page */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 25px;
+    }
+
+    .hero h2 {
+        font-size: 1.750rem;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .hero h3 {
+        font-size: 1.333rem;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 0.917rem;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .btn {
+        padding: 15px 24px;
+        font-size: 0.917rem;
+    }
+
+    .robots {
+        padding: 30px 25px;
+    }
+
+    .robots h2 {
+        padding-left: 0;
+        font-size: 1.667rem;
+        margin-bottom: 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 25px;
+    }
+
+    .cards .card {
+        aspect-ratio: 3/2;
+        min-height: 200px;
+    }
+
+    .cards .card h3.tip {
+        font-size: 2.2em;
+        margin-top: 15px;
+    }
+
+    .cards:has(.card:hover) .card:not(:hover) {
+        transform: scale(1);
+        filter: none;
+        opacity: 1;
+    }
+
+    .sponsors {
+        padding: 30px 25px;
+    }
+
+    .sponsors h2 {
+        font-size: 1.750rem;
+        margin-bottom: 15px;
+    }
+
+    .sponsors p {
+        font-size: 0.917rem;
+        line-height: 1.4;
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.667rem;
+        margin-bottom: 15px;
+    }
+
+    .popup-content p {
+        font-size: 0.917rem;
+        line-height: 1.4;
+    }
+
+    .close {
+        font-size: 1.333rem;
+        right: 20px;
+        top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.333rem;
+        line-height: 1.2;
+    }
+
+    .hero h3 {
+        font-size: 1.083rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 0.750rem;
+        line-height: 1.4;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 0.750rem;
+    }
+
+    .robots h2 {
+        font-size: 1.333rem;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .cards .card {
+        min-height: 160px;
+    }
+
+    .cards .card h3.tip {
+        font-size: 1.8em;
+    }
+
+    .sponsors h2 {
+        font-size: 1.333rem;
+    }
+
+    .sponsors p {
+        font-size: 0.750rem;
+        line-height: 1.4;
+    }
+
+    .popup-content {
+        padding: 25px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.333rem;
+    }
+
+    .popup-content p {
+        font-size: 0.750rem;
+    }
 }
