@@ -5,7 +5,10 @@
 
 .hero h2 {
     font-size: 55px;
-    margin-bottom: 15px;
+    margin-bottom: -30px;
+}
+.hero h3 {
+    font-size: 40px;
 }
 
 .hero p {
