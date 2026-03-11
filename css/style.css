@@ -473,4 +473,7 @@ body {
         font-size: 0.542rem;
         line-height: 1.5;
     }
+    footer{
+        font-size:0.3rem;
+    }
 }
