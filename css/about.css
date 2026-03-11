@@ -61,3 +61,17 @@
     color:lightgray;
     text-decoration:underline;
 }
+/* Mobile styles for about page */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+}

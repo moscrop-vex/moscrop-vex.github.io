@@ -52,3 +52,34 @@
 .competition-entry strong {
     color: #ff6600;
 }
+
+/* Mobile styles for competitions page */
+@media (max-width: 768px) {
+    .competitions {
+        padding: 20px;
+    }
+
+    .competitions h2 {
+        font-size: 40px;
+    }
+
+    .competitions p {
+        font-size: 20px;
+    }
+
+    .competition-entry {
+        padding: 15px;
+    }
+
+    .competition-entry .event-name {
+        font-size: 28px;
+    }
+
+    .competition-entry time {
+        font-size: 16px;
+    }
+
+    .competition-entry li {
+        font-size: 18px;
+    }
+}
