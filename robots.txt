@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /sitemap.xml
+Disallow:
 
 Sitemap: https://moscrop-vex.github.io/sitemap.xml
