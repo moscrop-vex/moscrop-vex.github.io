@@ -180,13 +180,21 @@
     position: relative;
 }
 
+.popup-content img.popup-image {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
 .popup-content h2{
-    font-size: 1.667rem;
-    margin-bottom: 15px;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
 }
 
 .popup-content p{
-    font-size: 0.833rem;
+    font-size: 1.00rem;
 }
 
 .close{
