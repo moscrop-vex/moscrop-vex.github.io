@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (classes.contains("danielv")) {
                     name = "Daniel";
                     memberRole = "Everything Everywhere All at Once";
-                    description = "Daniel earned his title by being the team’s most versatile asset. He specializes in rapid prototyping, moving seamlessly between CAD, mechanical assembly, and code. You’ll find him in the robotics room during almost every free block and lunch period, dedicated to refining our designs until they’re competition-ready.";
+                    description = "Daniel earned his title by being the team’s most versatile asset. He specializes in rapid prototyping, moving seamlessly between CAD, mechanical assembly, and code.";
                     imageSrc = "img/team/danielv.jpg";
                 } else if (classes.contains("radin")) {
                     name = "Radin";
