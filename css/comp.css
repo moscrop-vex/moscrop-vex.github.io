@@ -5,14 +5,17 @@
     margin: 0 auto;
 }
 
+.competition-entry td{
+    text-align: center;
+}
 .competitions h2 {
-    font-size: 2.500rem;
+    font-size: 3.50rem;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .competitions p {
-    font-size: 1.000rem;
+    font-size: 1.250rem;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -26,13 +29,13 @@
 }
 
 .competition-entry .event-name {
-    font-size: 1.500rem;
+    font-size: 2.00rem;
     margin-bottom: 10px;
     color: #ff6600;
 }
 
 .competition-entry time {
-    font-size: 0.750rem;
+    font-size: 1.000rem;
     color: #cccccc;
     display: block;
     margin-bottom: 15px;
@@ -44,7 +47,7 @@
 }
 
 .competition-entry li {
-    font-size: 0.833rem;
+    font-size: 1.000rem;
     margin-bottom: 10px;
     line-height: 1.4;
 }
@@ -61,12 +64,12 @@
     }
 
     .competitions h2 {
-        font-size: 1.083rem;
+        font-size: 1.750rem;
         margin-bottom: 15px;
     }
 
     .competitions p {
-        font-size: 0.625rem;
+        font-size: 0.917rem;
         margin-bottom: 20px;
         line-height: 1.5;
     }
@@ -78,23 +81,23 @@
     }
 
     .competition-entry .event-name {
-        font-size: 0.833rem;
+        font-size: 1.333rem;
         margin-bottom: 8px;
     }
 
     .competition-entry time {
-        font-size: 0.583rem;
+        font-size: 0.917rem;
         margin-bottom: 10px;
     }
 
     .competition-entry li {
-        font-size: 0.583rem;
+        font-size: 0.917rem;
         margin-bottom: 8px;
         line-height: 1.5;
     }
 
     .competition-entry strong {
-        font-size: 0.583rem;
+        font-size: 0.917rem;
     }
 }
 
