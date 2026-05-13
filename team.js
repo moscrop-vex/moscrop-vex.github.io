@@ -23,32 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (classes.contains("danielv")) {
                     name = "Daniel";
                     memberRole = "Everything Everywhere All at Once";
-                    description = "Description for Daniel";
+                    description = "Daniel is a core member of the team, with a wide range of skills and responsibilities. He specializes in coding and building but fills in wherever needed, his productivity is the engine of the team.";
                     imageSrc = "img/team/danielv.jpg";
                 } else if (classes.contains("radin")) {
                     name = "Radin";
-                    memberRole = "Builder & Designer";
-                    description = "Description for Radin";
-                    imageSrc = "img/team/radin.jpg";
-                } else if (classes.contains("kaleb")) {
-                    name = "Kaleb";
-                    memberRole = "Driver & Builder";
-                    description = "Description for Kaleb";
+                    memberRole = "Builder & Designer";                    
+                    description = "Radin is a reliable and hardworking member of the team, he specializes in building and design. His cheerful attitude keeps the spirit high and the team on track."
                     imageSrc = "img/team/kaleb.jpg";
                 } else if (classes.contains("kai")) {
                     name = "Kai";
                     memberRole = "Programmer";
-                    description = "Description for Kai";
+                    description = "Kai ";
                     imageSrc = "img/team/kai.jpg";
-                } else if (classes.contains("mrder")) {
-                    name = "Mr. Der";
-                    memberRole = "Sponsor Teacher";
-                    description = "Description for Mr. Der";
-                    imageSrc = "img/team/mrder.jpg";
-                } else if (classes.contains("akash")) {
+                } else if (classes.contains("kaleb")) {
+                    name = "Kaleb";
+                    memberRole = "Driver & Builder";
+                    description = "Kaleb is ";
+                    imageSrc = "img/team/kaleb.jpg";
+                }else if (classes.contains("akash")) {
                     name = "Akash";
                     memberRole = "Builder & Designer";
-                    description = "Description for Akash";
+                    description = "Akash is new to the team, but has already demonstrated his eagerness to learn and contribute. He is a quick learner and contributes greatly to building and design";
                     imageSrc = "img/team/akash.jpg";
                 }else if (classes.contains("ian")) {
                     name = "Ian";
@@ -70,7 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     memberRole = "Driver";
                     description = "Description for Alex";
                     imageSrc = "img/team/alex.jpg";
-                }
+                }else if (classes.contains("mrder")) {
+                    name = "Mr. Der";
+                    memberRole = "Sponsor Teacher";
+                    description = "Mr. Der is the team's sponsor teacher, providing guidance and support to the students. He is passionate about robotics and education, and his mentorship is invaluable to the team's success.";
+                    imageSrc = "img/team/mrder.jpg";
+                } 
 
                 title.textContent = name;
                 role.textContent = memberRole;
