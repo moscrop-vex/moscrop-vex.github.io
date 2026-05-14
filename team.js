@@ -29,21 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     name = "Radin";
                     memberRole = "Builder & Designer";                    
                     description = "Radin is a reliable and hardworking member of the team, he specializes in building and design. His cheerful attitude keeps the spirit high and the team on track."
-                    imageSrc = "img/team/kaleb.jpg";
+                    imageSrc = "img/team/radin.jpg";
                 } else if (classes.contains("kai")) {
                     name = "Kai";
                     memberRole = "Programmer";
-                    description = "Kai ";
+                    description = "Kai is an ‘if it works, don't touch it' kind of guy. To others his code might be a puzzle, but it always gets the job done. His speciality is quick troubleshooting and duct tape logic to keep the robot moving when it counts most";
                     imageSrc = "img/team/kai.jpg";
                 } else if (classes.contains("kaleb")) {
                     name = "Kaleb";
                     memberRole = "Driver & Builder";
-                    description = "Kaleb is ";
+                    description = "Kaleb plays a dual role as both a precision builder and the team's primary driver. His hands-on understanding of the hardware allows him to push the limits of the build during competition with confidence and control.";
                     imageSrc = "img/team/kaleb.jpg";
                 }else if (classes.contains("akash")) {
                     name = "Akash";
                     memberRole = "Builder & Designer";
-                    description = "Akash is new to the team, but has already demonstrated his eagerness to learn and contribute. He is a quick learner and contributes greatly to building and design";
+                    description = "Akash is new to the team, but has already demonstrated his eagerness to learn and contribute. He is a quick learner and contributes greatly to building and design.";
                     imageSrc = "img/team/akash.jpg";
                 }else if (classes.contains("ian")) {
                     name = "Ian";
