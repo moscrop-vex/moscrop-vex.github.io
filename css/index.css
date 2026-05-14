@@ -225,8 +225,12 @@
 
     .hero p {
         font-size: 0.917rem;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         line-height: 1.4;
+    }
+
+    .hero-content br {
+        display: none;
     }
 
     .btn {
@@ -319,7 +323,12 @@
 
     .hero p {
         font-size: 0.750rem;
+        margin-bottom: 10px;
         line-height: 1.4;
+    }
+
+    .hero-content br {
+        display: none;
     }
 
     .btn {
