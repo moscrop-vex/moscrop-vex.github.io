@@ -13,8 +13,23 @@ import Hero from "../components/Hero.astro";
     <h2>Who We Are</h2>
   </Hero>
 
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    @media (max-width: 640px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
   <section style="max-width: 900px; margin: 0 auto; padding: var(--space-3xl) var(--space-xl);">
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-bottom: var(--space-xl);">
+    <div class="about-grid">
       <div style="background: var(--gradient-card); border: 1px solid var(--clr-border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl);">
         <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--clr-accent); margin: 0 0 var(--space-md);">Our Mission</h3>
         <p style="font-family: var(--font-body); font-size: var(--text-base); color: var(--clr-text-secondary); margin: 0; line-height: 1.6;">
