@@ -1,0 +1,35 @@
+---
+interface CardItem {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  role?: string;
+  subteam?: string;
+}
+
+interface Props {
+  items: CardItem[];
+  variant: "robots" | "team";
+}
+
+const { items, variant } = Astro.props;
+const gridClass = variant === "robots" ? "cards cards--robots" : "cards cards--team";
+---
+
+<div class={gridClass}>
+  {items.map((item) => (
+    <div
+      class={`card ${item.slug}`}
+      data-name={item.name}
+      data-role={item.role ?? ""}
+      data-description={item.description}
+      data-image={item.image}
+      data-subteam={item.subteam ?? ""}
+      style={`background-image: url('${item.image}')`}
+    >
+      {item.role && <span class="role-badge">{item.role}</span>}
+      <h3 class="tip">{item.name}</h3>
+    </div>
+  ))}
+</div>

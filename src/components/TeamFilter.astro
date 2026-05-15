@@ -1,0 +1,33 @@
+<div class="team-filters">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="staff">Staff</button>
+  <button data-filter="32987A">32987A</button>
+  <button data-filter="32987B">32987B</button>
+  <button data-filter="legacy">Legacy</button>
+</div>
+
+<script>
+  function initTeamFilters() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".team-filters button");
+    const cards = document.querySelectorAll<HTMLElement>(".cards--team .card");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter ?? "all";
+
+        cards.forEach((card) => {
+          if (filter === "all" || card.dataset.subteam === filter) {
+            card.removeAttribute("data-hidden");
+          } else {
+            card.setAttribute("data-hidden", "");
+          }
+        });
+      });
+    });
+  }
+
+  initTeamFilters();
+</script>

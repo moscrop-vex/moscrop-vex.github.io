@@ -1,0 +1,23 @@
+---
+interface Props {
+  id: string;
+  variant?: "robot" | "team";
+}
+
+const { id, variant = "team" } = Astro.props;
+const popupClass = variant === "robot" ? "popup popup--robot" : "popup popup--team";
+---
+
+<div id={id} class={popupClass}>
+  <div class="popup-content">
+    <button class="close" aria-label="Close">&times;</button>
+    <img data-popup="image" class="popup-image" src="" alt="" />
+    <h2 data-popup="title"></h2>
+    {
+      variant === "team" && (
+        <p data-popup="role" class="popup-role"></p>
+      )
+    }
+    <p data-popup="description" class="popup-desc"></p>
+  </div>
+</div>

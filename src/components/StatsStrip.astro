@@ -1,0 +1,72 @@
+---
+interface Stat {
+  number: number;
+  label: string;
+}
+
+interface Props {
+  stats: Stat[];
+}
+
+const { stats } = Astro.props;
+---
+
+<section class="stats-strip">
+  <div class="stats-grid">
+    {stats.map((stat) => (
+      <div class="stat-item">
+        <span class="stat-number" data-count={stat.number}>{stat.number}</span>
+        <span class="stat-label">{stat.label}</span>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .stats-strip {
+    padding: var(--space-3xl) var(--space-xl);
+    border-top: 1px solid var(--clr-border-subtle);
+    border-bottom: 1px solid var(--clr-border-subtle);
+  }
+
+  .stats-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    color: var(--clr-accent);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--clr-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid {
+      gap: var(--space-xl);
+    }
+
+    .stat-number {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

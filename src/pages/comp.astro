@@ -1,0 +1,37 @@
+---
+import "../styles/competitions.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CompetitionEntry from "../components/CompetitionEntry.astro";
+import { competitions } from "../data/competitions";
+---
+
+<BaseLayout
+  title="Competitions"
+  description="Learn about the competitions that the V5RC 32987 Moscrop Robotics teams participate in"
+  canonical="/comp"
+>
+  <section class="competitions">
+    <h2>Competition History</h2>
+    <p>Below is a running log of our team's event results.</p>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      {competitions.map((comp, i) => <CompetitionEntry result={comp} index={i} />)}
+    </div>
+
+    <div class="season-summary">
+      <div class="season-stat">
+        <span class="stat-number">{competitions.length}</span>
+        <span class="stat-label">Total Events</span>
+      </div>
+      <div class="season-stat">
+        <span class="stat-number">42</span>
+        <span class="stat-label">Best Placement</span>
+      </div>
+      <div class="season-stat">
+        <span class="stat-number">14%</span>
+        <span class="stat-label">Win Rate</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+import "../styles/contact.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactLink from "../components/ContactLink.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with the V5RC 32987 Moscrop Robotics teams through email or social media"
+  canonical="/contact"
+>
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+
+    <div class="contact-grid">
+      <ContactLink
+        icon="/img/emailicon.png"
+        href={`mailto:${site.social.email}`}
+        label="Email"
+        value={site.social.email}
+        action="Send Email"
+      />
+      <ContactLink
+        icon="/img/instagramicon.png"
+        href={site.social.instagram}
+        label="Instagram"
+        value="@mosbots"
+        action="Follow Us"
+      />
+      <ContactLink
+        icon="/img/githubicon.png"
+        href={site.social.github}
+        label="GitHub"
+        value="moscrop-vex"
+        action="View Repos"
+      />
+    </div>
+
+    <div class="join-cta">
+      <h3>Interested in Joining?</h3>
+      <p>
+        We're always looking for passionate students to join our team.
+      </p>
+      <a href={`mailto:${site.social.email}`} class="btn--sm">Get in Touch</a>
+    </div>
+
+    <div class="school-info">
+      <p>Moscrop Secondary School &bull; Burnaby, BC &bull; Canada</p>
+    </div>
+  </section>
+</BaseLayout>

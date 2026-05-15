@@ -1,0 +1,90 @@
+:root {
+  /* === SURFACE SYSTEM (dark → light) === */
+  --clr-bg-deep: #0a0a0f;
+  --clr-bg: #111118;
+  --clr-surface-elevated: #1a1a24;
+  --clr-surface-high: #22222e;
+  --clr-border-subtle: #2a2a3a;
+  --clr-border: #333348;
+
+  /* === ACCENT SYSTEM (orange) === */
+  --clr-accent: #ff6a00;
+  --clr-accent-glow: #ff8c33;
+  --clr-accent-dim: #cc5500;
+  --clr-accent-neon: #ff9f4b;
+  --clr-accent-cool: #4da6ff;
+  --clr-accent-cool-glow: #7cc0ff;
+
+  /* === TEXT SYSTEM === */
+  --clr-text-primary: #f0f0f5;
+  --clr-text-secondary: #a0a0b8;
+  --clr-text-muted: #6a6a80;
+
+  /* === GRADIENTS === */
+  --gradient-page: radial-gradient(ellipse 80% 60% at 50% -10%, #1a1a35 0%, #0a0a0f 60%);
+  --gradient-card: linear-gradient(145deg, #1e1e2a 0%, #16161f 100%);
+  --gradient-accent: linear-gradient(135deg, #ff6a00 0%, #ff4500 50%, #ff8c33 100%);
+  --gradient-hero-overlay: linear-gradient(
+    to bottom,
+    rgba(10, 10, 15, 0.1) 0%,
+    rgba(10, 10, 15, 0.4) 40%,
+    rgba(17, 17, 24, 0.9) 85%,
+    #111118 100%
+  );
+
+  /* === TYPOGRAPHY === */
+  --font-display: "Iceland", monospace, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --text-xs: clamp(0.64rem, 0.05vw + 0.63rem, 0.7rem);
+  --text-sm: clamp(0.8rem, 0.1vw + 0.78rem, 0.875rem);
+  --text-base: clamp(1rem, 0.2vw + 0.95rem, 1.125rem);
+  --text-md: clamp(1.25rem, 0.3vw + 1.18rem, 1.4rem);
+  --text-lg: clamp(1.5rem, 0.5vw + 1.38rem, 1.75rem);
+  --text-xl: clamp(1.75rem, 0.7vw + 1.58rem, 2.2rem);
+  --text-2xl: clamp(2rem, 1vw + 1.75rem, 2.75rem);
+  --text-3xl: clamp(2.5rem, 1.5vw + 2.13rem, 3.5rem);
+  --text-4xl: clamp(3rem, 2vw + 2.5rem, 5rem);
+
+  /* === SPACING === */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* === RADII === */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* === SHADOWS === */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(255, 106, 0, 0.25);
+  --shadow-glow-lg: 0 0 50px rgba(255, 106, 0, 0.35);
+
+  /* === TRANSITIONS === */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

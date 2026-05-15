@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://moscrop-vex.github.io/sitemap.xml
