@@ -1,0 +1,25 @@
+---
+import { navItems } from "../data/site";
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<div class="sideMenuBlur">
+  <div class="sideMenu" id="sideMenu">
+    <nav class="sideMenuOptions">
+      {navItems.map((item) => {
+        const isActive = currentPath === item.href;
+        return (
+          <a href={item.href} class={isActive ? "active" : ""}>
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+</div>
+
+<script>
+  import { initMenu } from "../scripts/menu";
+  initMenu();
+</script>

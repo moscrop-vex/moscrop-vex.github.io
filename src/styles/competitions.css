@@ -1,0 +1,231 @@
+.competitions {
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+.competitions h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+  color: var(--clr-text-primary);
+}
+
+.competitions > p {
+  font-size: var(--text-base);
+  color: var(--clr-text-secondary);
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+/* === TIMELINE === */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-lg) 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--clr-accent), var(--clr-accent-dim), var(--clr-border-subtle));
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: var(--space-2xl);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  box-shadow: 0 0 16px rgba(255, 106, 0, 0.5);
+  border: 3px solid var(--clr-bg);
+  z-index: 2;
+}
+
+.timeline-content {
+  margin-left: 70px;
+  background: var(--gradient-card);
+  border: 1px solid var(--clr-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.timeline-content .event-name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  margin: 0 0 var(--space-xs);
+  color: var(--clr-accent);
+}
+
+.timeline-content time {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--clr-text-secondary);
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+/* === RESULTS CARDS === */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.result-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--clr-border-subtle);
+}
+
+.result-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.team-badge {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--clr-text-primary);
+  min-width: 80px;
+}
+
+.placement {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--clr-accent);
+  min-width: 70px;
+}
+
+.placement small {
+  font-size: 0.5em;
+  color: var(--clr-text-secondary);
+}
+
+.wlt-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--clr-border-subtle);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.wlt-fill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: 3px;
+  transition: width 1s var(--ease-out-expo);
+}
+
+.awards-badge {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--clr-text-secondary);
+}
+
+.awards-badge:empty::after {
+  content: "—";
+}
+
+/* === SEASON SUMMARY === */
+.season-summary {
+  max-width: 700px;
+  margin: var(--space-2xl) auto 0;
+  background: var(--gradient-card);
+  border: 1px solid var(--clr-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.season-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.season-stat .stat-number {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--clr-accent);
+}
+
+.season-stat .stat-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--clr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .competitions {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .competitions h2 {
+    font-size: var(--text-xl);
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 12px;
+  }
+
+  .timeline-content {
+    margin-left: 50px;
+    padding: var(--space-lg);
+  }
+
+  .timeline-content .event-name {
+    font-size: var(--text-lg);
+  }
+
+  .result-card {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .season-summary {
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .competitions {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .timeline-content {
+    margin-left: 42px;
+    padding: var(--space-md);
+  }
+
+  .result-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .wlt-bar {
+    width: 100%;
+  }
+}

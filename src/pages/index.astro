@@ -1,0 +1,72 @@
+---
+import "../styles/hero.css";
+import "../styles/cards.css";
+import "../styles/popup.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import CardGrid from "../components/CardGrid.astro";
+import StatsStrip from "../components/StatsStrip.astro";
+import Popup from "../components/Popup.astro";
+import { robots } from "../data/robots";
+import { teamMembers } from "../data/team";
+import { competitions } from "../data/competitions";
+import { site } from "../data/site";
+---
+
+<BaseLayout title="Home" description={site.description}>
+  <Hero image="/img/home-hero-bg.jpg" showShapes={true}>
+    <h2>Welcome to Moscrop Robotics</h2>
+    <h3>V5RC 32987</h3>
+    <p>{site.description}</p>
+    <div class="hero-actions">
+      <a href="/about" class="btn btn--primary">Learn More</a>
+      <a href="/team" class="btn btn--outline">Meet the Team</a>
+    </div>
+  </Hero>
+
+  <section style="padding: var(--space-3xl) var(--space-xl); text-align: center;">
+    <h2 style="font-family: var(--font-display); font-size: var(--text-3xl); margin-bottom: var(--space-xl);">
+      Meet the Bots!
+    </h2>
+    <div class="cards cards--robots">
+      {robots.map((robot) => (
+        <div
+          class={`card ${robot.slug}`}
+          data-name={robot.name}
+          data-role=""
+          data-description={robot.description}
+          data-image={robot.image}
+          style={`background-image: url('${robot.image}')`}
+        >
+          <h3 class="tip">{robot.name}</h3>
+        </div>
+      ))}
+      <div class="card card--info">
+        <div>
+          <p style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--clr-accent); margin: 0 0 8px;">
+            Built by Students
+          </p>
+          <p style="font-family: var(--font-body); font-size: var(--text-sm); color: var(--clr-text-secondary); margin: 0;">
+            Every robot is designed, built, and programmed by our team members
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <StatsStrip
+    stats={[
+      { number: 2, label: "Teams" },
+      { number: teamMembers.length, label: "Members" },
+      { number: competitions.length, label: "Competitions" },
+      { number: robots.length, label: "Robots" },
+    ]}
+  />
+
+  <Popup id="robotPopup" variant="robot" />
+</BaseLayout>
+
+<script>
+  import { initPopup } from "../scripts/popup";
+  initPopup("#robotPopup", ".cards--robots .card:not(.card--info)");
+</script>

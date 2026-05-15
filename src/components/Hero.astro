@@ -1,0 +1,24 @@
+---
+interface Props {
+  image: string;
+  variant?: "home" | "about";
+  showShapes?: boolean;
+}
+
+const { image, variant = "home", showShapes = variant === "home" } = Astro.props;
+const heroClass = variant === "about" ? "hero hero--about" : "hero";
+---
+
+<section class={heroClass} style={`background-image: url('${image}')`}>
+  <div class="overlay"></div>
+  {showShapes && (
+    <div class="hero-shapes" aria-hidden="true">
+      <div class="hero-shape hero-shape--hex"></div>
+      <div class="hero-shape hero-shape--circuit"></div>
+      <div class="hero-shape hero-shape--ring"></div>
+    </div>
+  )}
+  <div class="hero-content">
+    <slot />
+  </div>
+</section>

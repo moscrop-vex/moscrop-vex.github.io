@@ -1,0 +1,20 @@
+---
+interface Props {
+  icon: string;
+  href: string;
+  label: string;
+  value: string;
+  action: string;
+}
+
+const { icon, href, label, value, action } = Astro.props;
+---
+
+<div class="contact-card">
+  <div class="contact-icon">
+    <img src={icon} alt="" aria-hidden="true" width="24" height="24" />
+  </div>
+  <h3>{label}</h3>
+  <p class="contact-value">{value}</p>
+  <a href={href} class="btn--sm">{action}</a>
+</div>

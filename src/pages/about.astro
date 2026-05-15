@@ -1,0 +1,47 @@
+---
+import "../styles/hero.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+  title="About"
+  description="All about the V5RC 32987 Moscrop Robotics teams"
+  canonical="/about"
+>
+  <Hero image="/img/about-hero-bg.jpg" variant="about" showShapes={false}>
+    <h2>Who We Are</h2>
+  </Hero>
+
+  <section style="max-width: 900px; margin: 0 auto; padding: var(--space-3xl) var(--space-xl);">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); margin-bottom: var(--space-xl);">
+      <div style="background: var(--gradient-card); border: 1px solid var(--clr-border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl);">
+        <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--clr-accent); margin: 0 0 var(--space-md);">Our Mission</h3>
+        <p style="font-family: var(--font-body); font-size: var(--text-base); color: var(--clr-text-secondary); margin: 0; line-height: 1.6;">
+          Moscrop Robotics is a student-led competitive robotics program based at Moscrop Secondary School. Competing in the VEX Robotics Competition under team number 32987, our club brings together students passionate about engineering, programming, design, and teamwork.
+        </p>
+      </div>
+      <div style="background: var(--gradient-card); border: 1px solid var(--clr-border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl);">
+        <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--clr-accent); margin: 0 0 var(--space-md);">What We Do</h3>
+        <p style="font-family: var(--font-body); font-size: var(--text-base); color: var(--clr-text-secondary); margin: 0; line-height: 1.6;">
+          From brainstorming ideas and prototyping mechanisms to building, coding, and competing, every part of our robots is designed and created by students. Our current teams include 32987A and 32987B, with plans to expand to a third team.
+        </p>
+      </div>
+    </div>
+    <div style="background: var(--gradient-card); border: 1px solid var(--clr-border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl); margin-bottom: var(--space-2xl);">
+      <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--clr-accent); margin: 0 0 var(--space-md);">Our Vision</h3>
+      <p style="font-family: var(--font-body); font-size: var(--text-base); color: var(--clr-text-secondary); margin: 0; line-height: 1.6;">
+        As our program grows, we are working to make robotics more accessible to students at our school and in the community. Through dedication, innovation, and teamwork, Moscrop Robotics is building more than robots. We are building a community of future engineers, problem-solvers, and leaders.
+      </p>
+    </div>
+
+    <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); text-align: center; color: var(--clr-text-primary); margin-bottom: var(--space-xl);">Our Values</h3>
+    <div style="display: flex; gap: var(--space-lg); flex-wrap: wrap; justify-content: center;">
+      {["Innovation", "Teamwork", "Growth", "Education", "Competition"].map((value) => (
+        <div style="background: var(--gradient-card); border: 1px solid var(--clr-border-subtle); border-radius: var(--radius-full); padding: 10px 24px; text-align: center;">
+          <span style="font-family: var(--font-display); font-size: var(--text-base); color: var(--clr-accent-glow);">{value}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

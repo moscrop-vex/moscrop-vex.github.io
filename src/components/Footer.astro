@@ -1,0 +1,40 @@
+---
+import { site, navItems } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>{site.name}</h3>
+      <p>{site.description}</p>
+    </div>
+    <div class="footer-nav">
+      <h4>Navigate</h4>
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+    <div class="footer-connect">
+      <h4>Connect</h4>
+      <a href={`mailto:${site.social.email}`}>Email</a>
+      <a href={site.social.instagram}>Instagram</a>
+      <a href={site.social.github}>GitHub</a>
+    </div>
+    <div class="footer-credit">
+      <h4>Credit</h4>
+      <p>
+        Site by{" "}
+        {site.authors.map((a, i) => (
+          <>
+            {i > 0 && i === site.authors.length - 1 ? " & " : i > 0 ? ", " : ""}
+            <a href={a.url}>{a.name}</a>
+          </>
+        ))}
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; {year} {site.name}. All rights reserved.</span>
+    <span>V5RC 32987</span>
+  </div>
+</footer>

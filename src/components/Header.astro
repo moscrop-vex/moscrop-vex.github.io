@@ -1,0 +1,32 @@
+---
+import { navItems, site } from "../data/site";
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<div class="blurbg">
+  <div class="header">
+    <a href="/" class="header-brand" aria-label="Home">
+      <img src={site.logo} alt={`${site.shortName} logo`} height="52" />
+      <h1>Moscrop <span>Robotics</span></h1>
+    </a>
+
+    <nav class="desktopMenu">
+      {navItems.map((item) => {
+        const isActive = currentPath === item.href;
+        return (
+          <a href={item.href} class={isActive ? "active" : ""}>
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <div class="menu" aria-label="Toggle menu" role="button" tabindex="0">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+---
+import "../styles/cards.css";
+import "../styles/popup.css";
+import "../styles/team.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CardGrid from "../components/CardGrid.astro";
+import Popup from "../components/Popup.astro";
+import TeamFilter from "../components/TeamFilter.astro";
+import { teamMembers, subteams } from "../data/team";
+---
+
+<BaseLayout
+  title="Team"
+  description="Meet the team members behind Moscrop Robotics"
+  canonical="/team"
+>
+  <section class="team-section">
+    <h2>Meet the team!</h2>
+
+    <TeamFilter />
+
+    {subteams.map((st) => {
+      const members = teamMembers.filter((m) => m.subteam === st.id);
+      return (
+        <>
+          {st.showLabel && <h3>{st.label}</h3>}
+          <CardGrid items={members} variant="team" />
+        </>
+      );
+    })}
+  </section>
+
+  <Popup id="teamPopup" variant="team" />
+</BaseLayout>
+
+<script>
+  import { initPopup } from "../scripts/popup";
+  initPopup("#teamPopup", ".cards--team .card");
+</script>
