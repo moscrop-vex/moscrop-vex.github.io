@@ -48,22 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 }else if (classes.contains("ian")) {
                     name = "Ian";
                     memberRole = "Designer & Team Lead";
-                    description = "Description for Ian";
+                    description = "Placeholder description for Ian";
                     imageSrc = "img/team/ian.jpg";
                 }else if (classes.contains("aiden")) {
                     name = "Aiden";
                     memberRole = "Programmer";
-                    description = "Description for Aiden";
+                    description = "Placeholder description for Aiden";
                     imageSrc = "img/team/aiden.jpg";
                 }else if (classes.contains("danielh")) {
                     name = "Daniel";
                     memberRole = "Builder";
-                    description = "Description for Daniel";
+                    description = "Placeholder description for Daniel";
                     imageSrc = "img/team/danielh.jpg";
                 }else if (classes.contains("alex")) {
                     name = "Alex";
                     memberRole = "Driver";
-                    description = "Description for Alex";
+                    description = "Placeholder description for Alex";
                     imageSrc = "img/team/alex.jpg";
                 }else if (classes.contains("mrder")) {
                     name = "Mr. Der";
