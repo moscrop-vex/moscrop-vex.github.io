@@ -121,6 +121,14 @@ export const teamMembers: TeamMember[] = [
     image:"/img/team/joseph.png",
     subteam: "legacy",
   },
+  {
+    slug: "krish",
+    name: "Krish",
+    role: "Programmer",
+    description:"Krish is a dedicated programmer who has contributed significantly to the team's software development efforts. He has been instrumental in developing the codebase for the team's robots, ensuring that they operate efficiently and effectively during competitions. Krish's passion for programming and problem-solving has made him an invaluable member of the team. He has since graduated from Moscrop Secondary and is pursuing secondary education at BCIT.",
+    image:"/img/team/krish.png",
+    subteam: "legacy",
+  },
 ];
 
 export const subteams = [
