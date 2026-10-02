@@ -23,4 +23,5 @@ export const navItems = [
   { label: "Competitions", href: "/comp" },
   { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
+  { label: "Join", href: "/join" },
 ];

@@ -54,8 +54,7 @@ h6 {
 p,
 li,
 td,
-time,
-span {
+time {
   font-family: var(--font-body);
 }
 

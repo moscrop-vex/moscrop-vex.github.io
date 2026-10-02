@@ -15,7 +15,10 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
       {navItems.map((item) => {
         const isActive = currentPath === item.href;
         return (
-          <a href={item.href} class={isActive ? "active" : ""}>
+          <a
+            href={item.href}
+            class:list={{ active: isActive, "join-link": item.label === "Join" }}
+          >
             {item.label}
           </a>
         );

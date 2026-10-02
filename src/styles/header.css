@@ -68,7 +68,7 @@
 }
 
 .header h1 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   color: rgba(255, 255, 255, 0.92);
   margin: 0;
   white-space: nowrap;
@@ -134,6 +134,19 @@
   width: 60%;
   transform: translateX(-50%) scaleX(1);
   box-shadow: 0 0 8px rgba(255, 106, 0, 0.5);
+}
+
+.desktopMenu a.join-link,
+.desktopMenu a.join-link:hover,
+.desktopMenu a.join-link.active {
+  color: #000;
+  background: var(--clr-accent);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.desktopMenu a.join-link::after {
+  display: none;
 }
 
 /* === HAMBURGER === */
@@ -261,6 +274,15 @@
   text-shadow: 0 0 16px rgba(255, 106, 0, 0.4);
 }
 
+.sideMenuOptions a.join-link,
+.sideMenuOptions a.join-link:hover,
+.sideMenuOptions a.join-link.active {
+  color: #000;
+  background: var(--clr-accent);
+  text-shadow: none;
+  box-shadow: none;
+}
+
 /* === SEPARATOR IN SIDE MENU === */
 .sideMenuOptions::after {
   content: "";
@@ -289,6 +311,7 @@
 
   .header h1 {
     font-size: 1.8rem;
+    word-spacing: -0.02em;
   }
 
   .header img {
