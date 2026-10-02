@@ -139,10 +139,10 @@
 .desktopMenu a.join-link,
 .desktopMenu a.join-link:hover,
 .desktopMenu a.join-link.active {
-  color: #000;
-  background: var(--clr-accent);
+  color: #fff;
+  background: var(--gradient-accent);
   text-shadow: none;
-  box-shadow: none;
+  box-shadow: 0 4px 20px rgba(255, 106, 0, 0.3);
 }
 
 .desktopMenu a.join-link::after {
@@ -277,10 +277,10 @@
 .sideMenuOptions a.join-link,
 .sideMenuOptions a.join-link:hover,
 .sideMenuOptions a.join-link.active {
-  color: #000;
-  background: var(--clr-accent);
+  color: #fff;
+  background: var(--gradient-accent);
   text-shadow: none;
-  box-shadow: none;
+  box-shadow: 0 4px 20px rgba(255, 106, 0, 0.3);
 }
 
 /* === SEPARATOR IN SIDE MENU === */
