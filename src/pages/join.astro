@@ -1,7 +1,7 @@
 ---
 import "../styles/join.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { site } from "../data/site";
+import { meetingRoom, meetingTimes } from "../data/site";
 ---
 
 <BaseLayout
@@ -16,8 +16,18 @@ import { site } from "../data/site";
             Looking to join the team? We welcome students of all skill levels and backgrounds to participate in our robotics program. Whether you're a beginner or an experienced builder, there's a place for you on our team.
         </p>
         <p>
-            To join, simply come to Rm 120 during lunch!
+            To join, simply come to {meetingRoom} during one of our meeting times!
         </p>
+        </div>
+
+        <div class="join-meetings">
+          <h2>When We Meet</h2>
+          <ul class="join-meeting-list">
+            {meetingTimes.map((time) => (
+              <li>{time}</li>
+            ))}
+          </ul>
+          <p class="join-meeting-room">All meetings are in {meetingRoom}</p>
         </div>
   </section>
 </BaseLayout>

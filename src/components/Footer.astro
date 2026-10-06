@@ -1,5 +1,5 @@
 ---
-import { site, navItems } from "../data/site";
+import { site, navItems, meetingRoom, meetingTimes } from "../data/site";
 
 const year = new Date().getFullYear();
 ---
@@ -9,6 +9,11 @@ const year = new Date().getFullYear();
     <div class="footer-brand">
       <h3>{site.name}</h3>
       <p>{site.description}</p>
+    </div>
+    <div class="footer-meetings">
+      <h4>Meetings</h4>
+      {meetingTimes.map((time) => <span>{time}</span>)}
+      <span class="footer-room">{meetingRoom}</span>
     </div>
     <div class="footer-nav">
       <h4>Navigate</h4>

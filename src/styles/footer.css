@@ -7,7 +7,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1.1fr 1fr 1fr 1fr;
   gap: var(--space-2xl);
   max-width: 1100px;
   margin: 0 auto;
@@ -30,6 +30,7 @@ footer {
 }
 
 .footer-nav h4,
+.footer-meetings h4,
 .footer-connect h4,
 .footer-credit h4 {
   font-family: var(--font-display);
@@ -38,6 +39,26 @@ footer {
   margin: 0 0 var(--space-md);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.footer-meetings span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--clr-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-meetings .footer-room {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  padding: 3px 12px;
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  border-radius: var(--radius-full);
+  color: var(--clr-accent-glow);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .footer-nav a,

@@ -17,10 +17,19 @@ export const site = {
   ],
 };
 
+export const meetingRoom = "Rm 120";
+
+export const meetingTimes = [
+  "Every day at lunch",
+  "After school on Fridays",
+  "Tutorial block",
+];
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Competitions", href: "/comp" },
+  { label: "Robo Race", href: "/race" },
   { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
   { label: "Join", href: "/join" },

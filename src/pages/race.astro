@@ -1,0 +1,91 @@
+---
+import "../styles/race.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { race } from "../data/race";
+---
+
+<BaseLayout
+  title="Robo Race"
+  description="The Moscrop Robotics Robo Race: a build-the-fastest-robot race for grades 8 and 9, running on the Wemos R1 D1 (ESP8266) over WiFi"
+  canonical="/race"
+>
+  <section class="race">
+    <h2>{race.title}</h2>
+    <span class="race-audience">{race.audience}</span>
+    <p class="race-lede">{race.summary}</p>
+
+    <div class="race-grid">
+      <div class="race-card">
+        <h3>The Challenge</h3>
+        <p>
+          Build the fastest robot you can. The rules are intentionally minimal: whatever gets
+          your robot across the finish line first is fair game, as long as it stays inside the
+          limits below.
+        </p>
+        <p>
+          Groups design, build, and tune their own machine, then race it against everyone else.
+        </p>
+      </div>
+
+      <div class="race-card">
+        <h3>The Electronics</h3>
+        <p>{race.electronics.description}</p>
+        <div class="race-specs">
+          <div class="race-spec">
+            <strong>{race.electronics.board}</strong>
+            <span>Board</span>
+          </div>
+          <div class="race-spec">
+            <strong>{race.electronics.chip}</strong>
+            <span>Chip &amp; WiFi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="race-card race-card--wide">
+        <h3>Rules</h3>
+        <ul class="race-rules">
+          {race.rules.map((rule) => (
+            <li>
+              <span class="rule-label">{rule.label}</span>
+              <span class="rule-value">{rule.value}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="race-note">
+          If it isn't listed here, it's allowed. Measurements are taken at the largest point of
+          the robot.
+        </p>
+      </div>
+
+      <div class="race-card">
+        <h3>Teams</h3>
+        <p>{race.teams.description}</p>
+        <div class="race-specs">
+          <div class="race-spec">
+            <strong>{race.teams.size}</strong>
+            <span>Group size</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="race-card">
+        <h3>What You Provide</h3>
+        <p>
+          We hand you the code for basic functionality and WiFi control, so nobody starts from
+          scratch. Everything else is up to your group: chassis, drivetrain, wiring, and the
+          tuning that makes it fast.
+        </p>
+        <p>Build it however you want &mdash; just keep it within the rules above.</p>
+      </div>
+    </div>
+
+    <div class="race-cta">
+      <p>
+        Interested? Come find us in Rm 120 during any of our meeting times and ask about the
+        Robo Race.
+      </p>
+      <a href="/join" class="btn">How to Join</a>
+    </div>
+  </section>
+</BaseLayout>
