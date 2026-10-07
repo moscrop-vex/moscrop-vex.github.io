@@ -1,7 +1,7 @@
 ---
 import "../styles/join.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { meetingRoom, meetingTimes } from "../data/site";
+import { meetingRoom, meetingTimes, site } from "../data/site";
 ---
 
 <BaseLayout
@@ -28,6 +28,20 @@ import { meetingRoom, meetingTimes } from "../data/site";
             ))}
           </ul>
           <p class="join-meeting-room">All meetings are in {meetingRoom}</p>
+        </div>
+
+        <div class="join-discord">
+          <h2>Join Our Discord</h2>
+          <p>
+            Ask questions, get meeting updates, and chat with the team on our
+            Discord server.
+          </p>
+          <a
+            href={site.social.discord}
+            class="join-discord-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Join the Discord</a>
         </div>
   </section>
 </BaseLayout>

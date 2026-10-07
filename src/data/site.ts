@@ -10,6 +10,7 @@ export const site = {
     email: "moscrop.vex@gmail.com",
     instagram: "https://www.instagram.com/mosbots",
     github: "https://github.com/moscrop-vex",
+    discord: "https://discord.gg/4zmp4gV5Gf",
   },
   authors: [
     { name: "Errortoast", url: "https://github.com/Errortoast" },
