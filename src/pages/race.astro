@@ -18,12 +18,7 @@ import { race } from "../data/race";
       <div class="race-card">
         <h3>The Challenge</h3>
         <p>
-          Build the fastest robot you can. The rules are intentionally minimal: whatever gets
-          your robot across the finish line first is fair game, as long as it stays inside the
-          limits below.
-        </p>
-        <p>
-          Groups design, build, and tune their own machine, then race it against everyone else.
+          The goal is to build the fastest robot possible. The robots take turns going around a course, and the robot with the fastest time wins. Pretty simple.
         </p>
       </div>
 
@@ -48,7 +43,6 @@ import { race } from "../data/race";
           {race.rules.map((rule) => (
             <li>
               <span class="rule-label">{rule.label}</span>
-              <span class="rule-value">{rule.value}</span>
             </li>
           ))}
         </ul>
@@ -70,13 +64,10 @@ import { race } from "../data/race";
       </div>
 
       <div class="race-card">
-        <h3>What You Provide</h3>
+        <h3>Need help?</h3>
         <p>
-          We hand you the code for basic functionality and WiFi control, so nobody starts from
-          scratch. Everything else is up to your group: chassis, drivetrain, wiring, and the
-          tuning that makes it fast.
+          If you are stuck and/or need help, ask one of our senior team members for help. We are happy to help you get your robot working and moving.
         </p>
-        <p>Build it however you want &mdash; just keep it within the rules above.</p>
       </div>
     </div>
 

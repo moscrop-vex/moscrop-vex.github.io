@@ -15,7 +15,7 @@ export const teamMembers: TeamMember[] = [
     name: "Mr. Der",
     role: "Sponsor Teacher",
     description:
-      "Mr. Der is the team's sponsor teacher, providing guidance and support to the students. He is passionate about robotics and education, and his mentorship is invaluable to the team's success.",
+      "Description for Mr. Der",
     image: "/img/team/mrder.jpg",
     subteam: "staff",
   },
@@ -32,7 +32,7 @@ export const teamMembers: TeamMember[] = [
     name: "Daniel",
     role: "Everything Everywhere All at Once",
     description:
-      "Daniel is a core member of the team, with a wide range of skills and responsibilities. He specializes in coding and building but fills in wherever needed, his productivity is the engine of the team.",
+      "Description for Daniel",
     image: "/img/team/danielv.jpg",
     subteam: "32987A",
   },
@@ -41,7 +41,7 @@ export const teamMembers: TeamMember[] = [
     name: "Radin",
     role: "Builder & Designer",
     description:
-      "Radin is a reliable and hardworking member of the team, he specializes in building and design. His cheerful attitude keeps the spirit high and the team on track.",
+      "Description for Radin",
     image: "/img/team/radin.jpg",
     subteam: "32987A",
   },
@@ -50,7 +50,7 @@ export const teamMembers: TeamMember[] = [
     name: "Akash",
     role: "Builder & Designer",
     description:
-      "Akash is new to the team, but has already demonstrated his eagerness to learn and contribute. He is a quick learner and contributes greatly to building and design.",
+      "Description for Akash",
     image: "/img/team/akash.jpg",
     subteam: "32987A",
   },
@@ -59,7 +59,7 @@ export const teamMembers: TeamMember[] = [
     name: "Kaleb",
     role: "Driver & Builder",
     description:
-      "Kaleb plays a dual role as both a precision builder and the team's primary driver. His hands-on understanding of the hardware allows him to push the limits of the build during competition with confidence and control.",
+      "Description for Kaleb",
     image: "/img/team/kaleb.jpg",
     subteam: "32987A",
   },
@@ -68,7 +68,7 @@ export const teamMembers: TeamMember[] = [
     name: "Kai",
     role: "Programmer",
     description:
-      "Kai is an 'if it works, don't touch it' kind of guy. To others his code might be a puzzle, but it always gets the job done. His speciality is quick troubleshooting and duct tape logic to keep the robot moving when it counts most.",
+      "Description for Kai",
     image: "/img/team/kai.jpg",
     subteam: "32987A",
   },

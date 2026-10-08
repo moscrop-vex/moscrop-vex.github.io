@@ -3,7 +3,7 @@ export const site = {
   shortName: "Mosbots",
   url: "https://moscrop-vex.github.io",
   description:
-    "Mosbots is Moscrop Secondary's competitive VEX Robotics teams, designing and building robots to compete in the V5 Robotics Competition. Based in Burnaby, BC.",
+    "Mosbots is Ecole Moscrop Secondary School's robotics club, based in Burnaby, BC. We have 2 competitive VEX V5 teams and a group of younger students participating in our local Robo Race competition.",
   locale: "en-CA",
   logo: "/img/mosbotslogo.png",
   social: {
