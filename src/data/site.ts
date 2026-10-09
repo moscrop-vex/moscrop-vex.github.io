@@ -31,7 +31,7 @@ export const navItems = [
   { label: "About", href: "/about" },
   { label: "Competitions", href: "/comp" },
   { label: "Robo Race", href: "/race" },
-  { label: "Team", href: "/team" },
+  //{ label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
   { label: "Join", href: "/join" },
 ];
