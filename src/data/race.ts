@@ -12,7 +12,7 @@ export const race = {
   rules: [
     { label: "Maximum of 4 motors"},
     { label: "No weapons or projectiles"},
-    { label: "Maximum footprint of 10x12in" },
+    { label: "Maximum footprint of 12x15in" },
     { label: "You may modify the provided code" },
   ],
   teams: {
