@@ -126,6 +126,21 @@
   font-size: var(--text-lg);
 }
 
+/* === SPONSOR VARIANT === */
+.cards--sponsors {
+  display: flex;
+  justify-content: center;
+}
+
+.cards--sponsors .card--sponsor {
+  width: fit-content;
+  height: fit-content;
+}
+
+.cards--sponsors .card--sponsor::before {
+  display: none;
+}
+
 /* === INFO CARD === */
 .card--info {
   display: flex;
