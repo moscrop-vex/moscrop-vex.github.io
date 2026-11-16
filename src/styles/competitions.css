@@ -60,11 +60,29 @@
   padding: var(--space-xl);
 }
 
+.event-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
 .timeline-content .event-name {
+  flex: 1;
+  min-width: 0;
   font-family: var(--font-display);
   font-size: var(--text-xl);
-  margin: 0 0 var(--space-xs);
+  margin: 0;
   color: var(--clr-accent);
+}
+
+.event-season {
+  flex-shrink: 0;
+  color: var(--clr-text-secondary);
+  font-size: var(--text-sm);
+  text-align: right;
+  white-space: nowrap;
 }
 
 .timeline-content time {
@@ -83,10 +101,11 @@
 }
 
 .result-card {
+  --result-gap: var(--space-lg);
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
-  padding: var(--space-md) 0;
+  gap: var(--result-gap);
+  padding: var(--space-md);
   border-bottom: 1px solid var(--clr-border-subtle);
 }
 
@@ -96,17 +115,61 @@
 }
 
 .team-badge {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  line-height: 1.1;
   font-family: var(--font-display);
   font-size: var(--text-lg);
   color: var(--clr-text-primary);
   min-width: 80px;
 }
 
+.team-label {
+  position: absolute;
+  bottom: calc(100% + var(--space-xs));
+  left: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--clr-text-muted);
+}
+
+.wlt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  line-height: 1.1;
+  font-family: var(--font-display);
+  color: var(--clr-text-primary);
+  min-width: 70px;
+}
+
+.wlt > span {
+  font-size: calc(var(--text-base) * 1.5);
+}
+
+.wlt-label {
+  position: absolute;
+  bottom: calc(100% + var(--space-xs));
+  left: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--clr-text-muted);
+}
+
+.placement-group {
+  display: flex;
+  flex: 1 1 calc(70px + var(--result-gap));
+  align-items: center;
+  gap: var(--result-gap);
+  min-width: calc(70px + var(--result-gap));
+}
+
 .placement {
   font-family: var(--font-display);
   font-size: var(--text-xl);
   color: var(--clr-accent);
-  min-width: 70px;
+  flex: 0 0 70px;
 }
 
 .placement small {
@@ -133,10 +196,6 @@
   font-family: var(--font-body);
   font-size: var(--text-sm);
   color: var(--clr-text-secondary);
-}
-
-.awards-badge:empty::after {
-  content: "—";
 }
 
 /* === SEASON SUMMARY === */
@@ -199,8 +258,8 @@
   }
 
   .result-card {
+    --result-gap: var(--space-sm);
     flex-wrap: wrap;
-    gap: var(--space-sm);
   }
 
   .season-summary {
@@ -220,12 +279,11 @@
   }
 
   .result-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-xs);
+    --result-gap: var(--space-xs);
+    flex-wrap: wrap;
   }
 
   .wlt-bar {
-    width: 100%;
+    min-width: 0;
   }
 }

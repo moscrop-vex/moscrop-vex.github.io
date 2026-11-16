@@ -3,6 +3,22 @@ import "../styles/competitions.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CompetitionEntry from "../components/CompetitionEntry.astro";
 import { competitions } from "../data/competitions";
+
+const wltTotals = competitions
+  .flatMap((competition) => competition.results)
+  .reduce(
+    (totals, { wlt }) => {
+      const [wins, losses, ties] = wlt.split("-").map(Number);
+      totals.wins += wins;
+      totals.losses += losses;
+      totals.ties += ties;
+      return totals;
+    },
+    { wins: 0, losses: 0, ties: 0 },
+  );
+const totalGames = wltTotals.wins + wltTotals.losses + wltTotals.ties;
+const averageWinRate =
+  totalGames > 0 ? Math.round((wltTotals.wins / totalGames) * 100) : 0;
 ---
 
 <BaseLayout
@@ -25,12 +41,8 @@ import { competitions } from "../data/competitions";
         <span class="stat-label">Total Events</span>
       </div>
       <div class="season-stat">
-        <span class="stat-number">42</span>
-        <span class="stat-label">Best Placement</span>
-      </div>
-      <div class="season-stat">
-        <span class="stat-number">14%</span>
-        <span class="stat-label">Win Rate</span>
+        <span class="stat-number">{averageWinRate}%</span>
+        <span class="stat-label">Average Win Rate</span>
       </div>
     </div>
   </section>
