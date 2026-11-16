@@ -16,7 +16,9 @@ import { site } from "../data/site";
 <BaseLayout title="Moscrop Robotics" description={site.description}>
   <Hero image="/img/home-hero-bg.jpg" showShapes={true}>
     <h2>Welcome to Mosbots</h2>
-    <h3>V5RC 32987</h3>
+    <a href="https://events.vex.com/teams/V5RC/32987A" style="text-decoration: none;">
+      <h3>V5RC 32987</h3>
+    </a>
     <p>{site.description}</p>
     <div class="hero-actions">
       <a href="/about" class="btn btn--primary">Learn More</a>
@@ -60,7 +62,6 @@ import { site } from "../data/site";
   <StatsStrip
     stats={[
       { number: 2, label: "Teams" },
-      { number: teamMembers.length, label: "Members" },
       { number: competitions.length, label: "Competitions" },
       { number: robots.length, label: "Robots" },
     ]}
