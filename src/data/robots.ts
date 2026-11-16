@@ -7,6 +7,13 @@ export interface Robot {
 
 export const robots: Robot[] = [
   {
+    slug: "henry",
+    name: "Henry",
+    image: "/img/henry.jpeg",
+    description:
+      "Henry is our 2026-27 VEX V5 Override competition robot. He has so far competed in the 2026 PYRS Salish Fall Qualifier. As our second competition robot, Henry reached the quarterfinals at his first event, a strong start for our team as we keep learning and improving.",
+  },
+  {
     slug: "gabriel",
     name: "Gabriel",
     image: "/img/gabriel.jpg",
